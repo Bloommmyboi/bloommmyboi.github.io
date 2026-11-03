@@ -92,6 +92,31 @@ footer{text-align:center;background:var(--navy);color:#bdd0db;padding:33px 18px;
 footer strong{color:white;font-size:19px}
 @media(max-width:750px){.grid,.grid3{grid-template-columns:1fr}.hero{padding:46px 0}.topbar{justify-content:center}.back{font-size:12px}section.unit{padding:43px 0}.dialogue{padding:17px}}
 @media print{header,.toc,.btn{display:none!important}body{background:white}section.unit{padding:20px 0;break-inside:avoid}}
+
+/* Interactive lesson enhancements */
+:focus-visible{outline:3px solid #f4b942;outline-offset:3px}
+html{scroll-padding-top:84px}
+.audio-notice{font-size:12px!important;max-width:740px;color:#c6dedc!important}
+.listen{background:#e9f7f4;border:1px solid #bbdfd6;border-radius:7px;color:#075b55;display:inline-block;font-size:12px;font-weight:bold;margin:12px 0 0;padding:6px 10px}
+.listen:hover,.listen:focus-visible{background:#d3f0e7}
+.pattern{display:inline-block;background:#e8f7f3;color:#0a655e;padding:5px 11px;border-radius:6px;font-weight:bold;font-size:13px}
+.mistake-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.mistake{background:white;border:1px solid #e2e9ed;border-radius:12px;padding:18px;display:flex;flex-direction:column;gap:5px}
+.mistake span{color:#945321;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px}
+.mistake del{color:#8a4a41;font-size:14px}
+.mistake strong{color:#086d64;font-size:16px}
+.mistake small{color:#65798b;font-size:13px}
+.flashcard-box{max-width:760px;background:linear-gradient(130deg,#0d1b2a,#1d4e54);border-radius:18px;padding:32px;color:white;box-shadow:0 20px 48px #112b3722}
+.flashcard-count{font-weight:bold;color:#aee2d9;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.flashcard-question{font:clamp(23px,3vw,32px)/1.3 Georgia,serif;margin:22px 0;min-height:68px}
+.flashcard-answer{background:#e8f7f3;color:#0b504a;border-radius:10px;padding:20px;margin-bottom:16px;font-size:21px;font-weight:bold}
+.flashcard-actions{display:flex;flex-wrap:wrap;gap:8px}
+.flashcard-actions .btn{margin:0}.flashcard-actions .btn.light{color:#0d1b2a}
+.progress-summary{background:#e8f7f3;border-left:4px solid var(--teal);padding:17px 20px;border-radius:8px}
+.progress-summary p{font-size:12px;color:#4a7070;margin:4px 0 0}
+#full-answer-key ol{padding-left:24px}#full-answer-key li{padding:7px 0;border-bottom:1px solid #e4eded;font-size:14px}
+@media(max-width:750px){.mistake-grid{grid-template-columns:1fr}.flashcard-box{padding:22px}.flashcard-actions .btn{font-size:12px;padding:10px 12px}}
+@media print{.flashcard-actions,.listen,.audio-notice{display:none!important}.flashcard-box{background:white;color:black;box-shadow:none;border:1px solid #ccc}.flashcard-question{min-height:0}}
 </style>
 </head>
 <body>
@@ -108,7 +133,7 @@ footer strong{color:white;font-size:19px}
 
 <div class="hero">
 <div class="container">
-<span class="tag">MODULE 01 · SOUND FOUNDATIONS</span>
+<span class="tag">MODULE 01 · FIRST FOUNDATIONS</span>
 <h1>LESSON 001<br><span>Welcome to English</span></h1>
 <p>Everyday Phrases and Learning Routines</p>
 <p>Your first step towards communicating confidently in British English. Learn practical phrases, understand when to use them and begin building a simple daily learning habit.</p>
@@ -117,9 +142,12 @@ footer strong{color:white;font-size:19px}
 <span>100% FREE</span>
 <span>BRITISH ENGLISH</span>
 <span>SELF-PACED</span>
+<span>40 PRACTICE ACTIVITIES</span>
 </div>
 <a class="btn gold" href="#goals">Start This Lesson →</a>
 <a class="btn light" href="#practice">Jump to Practice</a>
+<button class="btn light" type="button" onclick="window.print()">Print Lesson</button>
+<p class="audio-notice" id="audio-message" role="status" aria-live="polite">Listening buttons use your device's speech voice when available. The accent may vary by device.</p>
 </div>
 </div>
 
@@ -128,10 +156,13 @@ footer strong{color:white;font-size:19px}
 <a href="#goals">Goals</a>
 <a href="#core">10 Core Phrases</a>
 <a href="#more">More Examples</a>
+<a href="#patterns">Sentence Patterns</a>
 <a href="#british">British English</a>
 <a href="#dialogues">Dialogues</a>
+<a href="#flashcards">Flashcards</a>
 <a href="#routine">Study Routine</a>
 <a href="#practice">40 Exercises</a>
+<a href="#answers">Answer Key</a>
 <a href="#review">Review</a>
 </div>
 </div>
@@ -200,6 +231,42 @@ footer strong{color:white;font-size:19px}
 </div>
 </section>
 
+<section class="unit" id="patterns">
+<div class="container">
+<div class="kicker">04 · Understand the Language</div>
+<h2>How everyday English sentences work</h2>
+<p class="lead">You can start speaking before learning every grammar rule. These six patterns show how to build useful, polite sentences from small parts.</p>
+<div class="grid">
+<div class="card"><div class="pattern">My name is + name</div><h3>Introduce yourself</h3><p><strong>My name is Amina.</strong> The words “My name is” stay the same; change the name.</p><p><strong>Say:</strong> My name is Oliver. / My name is Priya.</p></div>
+<div class="card"><div class="pattern">I am / I'm + information</div><h3>Talk about yourself</h3><p><strong>I am</strong> is the full form. <strong>I'm</strong> is the short form. Both can introduce identity or a situation.</p><p><strong>Say:</strong> I am a student. / I'm from Cardiff.</p></div>
+<div class="card"><div class="pattern">I am learning English for + reason</div><h3>Explain your purpose</h3><p>The word <strong>for</strong> introduces the reason or purpose here.</p><p><strong>Say:</strong> I'm learning English for work. / I am learning English for travel.</p></div>
+<div class="card"><div class="pattern">Could you + verb + please?</div><h3>Make a polite request</h3><p><strong>Could you</strong> is often a polite way to ask somebody to do something. Use the basic verb form after <strong>you</strong>.</p><p><strong>Say:</strong> Could you help me, please? / Could you repeat that, please?</p></div>
+<div class="card"><div class="pattern">Please + verb</div><h3>Ask simply and politely</h3><p>Start a simple request with <strong>Please</strong>. Use the basic verb form.</p><p><strong>Say:</strong> Please speak slowly. / Please write it down.</p></div>
+<div class="card"><div class="pattern">Thank you + for + thing</div><h3>Show appreciation</h3><p>Use <strong>Thank you</strong> by itself, or add <strong>for</strong> to explain why.</p><p><strong>Say:</strong> Thank you. / Thank you for your help.</p></div>
+</div>
+<h3>How do you reply?</h3>
+<p>In a conversation, you need to understand the other person’s words and respond naturally.</p>
+<div class="tablewrap"><table><thead><tr><th>Someone says...</th><th>You can reply...</th><th>Why it works</th></tr></thead><tbody>
+<tr><td>Hello!</td><td>Hello! / Hi!</td><td>Return the greeting.</td></tr>
+<tr><td>How are you?</td><td>I'm fine, thank you. And you?</td><td>Give a short answer and ask back.</td></tr>
+<tr><td>Nice to meet you.</td><td>Nice to meet you, too.</td><td>Use “too” to return the friendly expression.</td></tr>
+<tr><td>Thank you.</td><td>You're welcome. / No problem.</td><td>Accept someone's thanks politely.</td></tr>
+<tr><td>Sorry, could you repeat that?</td><td>Of course. / Certainly.</td><td>Agree to repeat the information.</td></tr>
+<tr><td>Have a good day!</td><td>Thank you. You too!</td><td>Return the good wish.</td></tr>
+</tbody></table></div>
+<h3>Common beginner mistakes — and how to fix them</h3>
+<div class="mistake-grid">
+<div class="mistake"><span>Not natural</span><del>My name Sara.</del><strong>My name is Sara.</strong><small>Use <b>is</b> in this pattern.</small></div>
+<div class="mistake"><span>Not natural</span><del>I learning English.</del><strong>I am learning English.</strong><small>Use <b>am</b> before <b>learning</b>.</small></div>
+<div class="mistake"><span>Too direct</span><del>Repeat!</del><strong>Could you repeat that, please?</strong><small>Make the request polite.</small></div>
+<div class="mistake"><span>Wrong situation</span><del>Good night! (when arriving)</del><strong>Good evening! (when arriving)</strong><small>Use <b>Good night</b> mainly when leaving or before bed.</small></div>
+<div class="mistake"><span>Needs a capital letter</span><del>i am from london.</del><strong>I am from London.</strong><small>Capitalise <b>I</b> and place names.</small></div>
+<div class="mistake"><span>Incorrect verb form</span><del>Could you speaks slowly?</del><strong>Could you speak slowly?</strong><small>Use <b>speak</b>, not <b>speaks</b>, after <b>could you</b>.</small></div>
+</div>
+<div class="highlight gold"><strong>Try it now:</strong> Say these three sentences using your own information: “My name is ...”; “I'm from ...”; “I'm learning English for ...”. Then practise a polite request.</div>
+</div>
+</section>
+
 <section class="unit" id="british">
 <div class="container">
 <div class="kicker">04 · Speak Naturally</div>
@@ -233,7 +300,7 @@ footer strong{color:white;font-size:19px}
 </div>
 
 <div class="highlight gold">
-<strong>Important:</strong> This is a text-based pronunciation guide. British-English audio and video demonstrations can be added when they are ready. Never worry if your accent is not perfect at the beginning.
+<strong>Listening practice:</strong> Tap “Listen” beside a core phrase to hear your device’s synthetic English voice. If a British English voice is installed, the page will try to use it; pronunciation and availability depend on your device. Speak aloud after listening. This is not a recorded lesson by our teachers.
 </div>
 
 <h3>Simple writing conventions</h3>
@@ -252,6 +319,25 @@ footer strong{color:white;font-size:19px}
 <h2>Five practical conversations</h2>
 <p class="lead">Read the dialogues slowly. Then practise both speakers' lines. You can replace the names and situations with details from your own life.</p>
 <div id="dialogue-list"></div>
+</div>
+</section>
+
+<section class="unit" id="flashcards">
+<div class="container">
+<div class="kicker">07 · Recall and Speak</div>
+<h2>Practise with interactive flashcards</h2>
+<p class="lead">Read the situation, try to say a suitable English phrase aloud, then reveal the example answer. These cards use the 10 core phrases from this lesson.</p>
+<div class="flashcard-box">
+<div class="flashcard-count" id="flashcard-count" aria-live="polite">Card 1 of 10</div>
+<div class="flashcard-question" id="flashcard-question"></div>
+<div class="flashcard-answer" id="flashcard-answer" hidden aria-live="polite"></div>
+<div class="flashcard-actions">
+<button class="btn teal" type="button" id="reveal-card" onclick="revealCard()">Reveal Answer</button>
+<button class="btn light" type="button" onclick="nextCard()">Next Card →</button>
+<button class="btn light" type="button" onclick="listenCard()">🔊 Listen</button>
+<button class="btn light" type="button" onclick="shuffleCards()">Shuffle Cards</button>
+</div>
+</div>
 </div>
 </section>
 
@@ -279,6 +365,7 @@ footer strong{color:white;font-size:19px}
 <h2>40 practice activities</h2>
 <p class="lead">Complete the activities in order. Read each question carefully. Some answers are checked automatically; open-ended writing tasks include model responses.</p>
 
+<div class="progress-summary" role="status"><strong>Practice progress:</strong> <span id="practice-progress">No sections checked yet.</span><p>Your checked scores are saved on this device when browser storage is available.</p></div>
 <div class="exercise-set">
 <h3>Part A — Choose the best answer (12 questions)</h3>
 <p>Select one answer for each question and press “Check Answers”.</p>
@@ -325,6 +412,12 @@ footer strong{color:white;font-size:19px}
 
 <div class="exercise"><strong>40. Write a short three-line conversation between two people meeting for the first time.</strong><textarea placeholder="Write your conversation here..."></textarea><details><summary>Show model answer</summary><p>A: Hello. My name is Sara.<br>B: Hello, I'm Karim. Nice to meet you.<br>A: Nice to meet you, too.</p></details></div>
 </div>
+<div class="exercise-set" id="answers">
+<h3>Full answer key and explanations</h3>
+<p>Try the activities yourself first. You can then open the complete answer key to study or print it.</p>
+<details><summary>Show answers to Parts A–D (questions 1–35)</summary><div id="full-answer-key"></div></details>
+<p class="tip">Part E (questions 36–40) has open-ended model responses below each writing task. More than one correct personal answer may be possible.</p>
+</div>
 </div>
 </section>
 
@@ -335,6 +428,7 @@ footer strong{color:white;font-size:19px}
 <p>Before moving forward, make sure you can use at least three complete phrases without looking at the examples.</p>
 <div class="card">
 <h3>Lesson completion checklist</h3>
+<p class="tip">Your checklist is saved on this device when local browser storage is available.</p>
 <label><input type="checkbox"> I can greet another person politely.</label><hr>
 <label><input type="checkbox"> I can introduce myself using my name.</label><hr>
 <label><input type="checkbox"> I can ask somebody to speak slowly.</label><hr>
@@ -342,6 +436,7 @@ footer strong{color:white;font-size:19px}
 <label><input type="checkbox"> I can thank somebody.</label><hr>
 <label><input type="checkbox"> I can say why I am learning English.</label><hr>
 <label><input type="checkbox"> I have completed the practice activities.</label>
+<p id="review-progress" class="result" aria-live="polite">0 of 7 goals checked</p>
 </div>
 <div class="highlight gold">
 <strong>Final challenge:</strong> Imagine you are meeting a new colleague. Greet them, introduce yourself, explain that you are learning English and ask them to speak slowly. Try to do this without reading your notes.
@@ -349,7 +444,7 @@ footer strong{color:white;font-size:19px}
 <div class="finish">
 <h2>Well done! You have started your English journey.</h2>
 <p>Remember: you do not need perfect English before you begin speaking. Start small, practise regularly and keep going.</p>
-<p><strong>Next:</strong> Lesson 002 — The Alphabet, Part 1: A to M.</p>
+<p><strong>Next:</strong> Lesson 002 — The English Alphabet. A preview is available on the home page; the full lesson is coming soon.</p>
 <a href="/" class="btn gold">Back to Academy →</a>
 </div>
 </div>
@@ -378,7 +473,7 @@ const core=[
 ["Thank you. Now I understand.","Thank somebody and show that the explanation helped."]
 ];
 document.getElementById("core-phrases").innerHTML=core.map((x,i)=>`
-<div class="phrase"><span class="num">${String(i+1).padStart(2,"0")}</span><strong>${x[0]}</strong><small>${x[1]}</small></div>`).join("");
+<div class="phrase"><span class="num">${String(i+1).padStart(2,"0")}</span><strong>${x[0]}</strong><small>${x[1]}</small><button class="listen" type="button" onclick="speakPhrase(${i})" aria-label="Listen to phrase ${i+1}">🔊 Listen</button></div>`).join("");
 
 const groups=[
 {title:"A. Greetings and Friendly Openings",items:[
@@ -492,7 +587,7 @@ ${x.o.map((o,j)=>`<label class="choice"><input type="radio" name="m${i}" value="
 </div>`).join("");
 
 function norm(s){return String(s).toLowerCase().replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim()}
-function showResult(id,score,total){let el=document.getElementById(id);el.hidden=false;el.textContent="Your score: "+score+" / "+total+". Review the explanations below."}
+function showResult(id,score,total){let el=document.getElementById(id);el.hidden=false;el.textContent="Your score: "+score+" / "+total+". Review the explanations below.";savePracticeResult(id,score,total)}
 function showFeedback(id,correct,answer,why){
 const el=document.getElementById(id);
 el.hidden=false;
@@ -597,6 +692,102 @@ showFeedback("matchf"+i,correct,answer[0]+". "+answer[1],"This phrase is suitabl
 });
 showResult("matching-result",score,matching.length);
 }
+
+// Listen using the browser's available voices. The device controls the accent.
+function speakText(words){
+const notice=document.getElementById("audio-message");
+if(!("speechSynthesis" in window)||!("SpeechSynthesisUtterance" in window)){
+if(notice)notice.textContent="Audio is not supported in this browser. Read the phrase aloud instead.";
+return;
+}
+try{
+window.speechSynthesis.cancel();
+const utterance=new SpeechSynthesisUtterance(words);
+utterance.lang="en-GB";
+utterance.rate=0.84;
+utterance.pitch=1;
+const voices=window.speechSynthesis.getVoices();
+const british=voices.find(v=>v.lang.toLowerCase()==="en-gb")||voices.find(v=>v.lang.toLowerCase().startsWith("en-gb"));
+if(british)utterance.voice=british;
+if(notice)notice.textContent=british?"Playing with a British English voice available on this device.":"Playing an English voice. The accent may vary by device.";
+window.speechSynthesis.speak(utterance);
+}catch(e){if(notice)notice.textContent="Audio could not play. Please read the phrase aloud instead.";}
+}
+function speakPhrase(index){if(core[index])speakText(core[index][0])}
+
+// Situation-to-phrase speaking cards.
+const cardPrompts=[
+"You meet a new person and want to say your name.",
+"Someone is speaking too quickly.",
+"You did not understand. Ask the person to repeat.",
+"Introduce yourself to someone called James.",
+"It was difficult to hear an instruction. Ask again.",
+"Introduce yourself politely in the afternoon.",
+"Explain that you study English because of your job.",
+"Ask your teacher to write a word on the board.",
+"Ask somebody to reduce their speaking speed.",
+"Somebody's explanation helped you understand."
+];
+let cardOrder=core.map((_,i)=>i),cardPosition=0;
+function renderCard(){
+const i=cardOrder[cardPosition];
+document.getElementById("flashcard-count").textContent="Card "+(cardPosition+1)+" of "+cardOrder.length;
+document.getElementById("flashcard-question").textContent=cardPrompts[i];
+const answer=document.getElementById("flashcard-answer");
+answer.textContent=core[i][0];answer.hidden=true;
+document.getElementById("reveal-card").textContent="Reveal Answer";
+}
+function revealCard(){
+const answer=document.getElementById("flashcard-answer");
+answer.hidden=!answer.hidden;
+document.getElementById("reveal-card").textContent=answer.hidden?"Reveal Answer":"Hide Answer";
+}
+function nextCard(){cardPosition=(cardPosition+1)%cardOrder.length;renderCard()}
+function listenCard(){speakText(core[cardOrder[cardPosition]][0])}
+function shuffleCards(){
+for(let i=cardOrder.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[cardOrder[i],cardOrder[j]]=[cardOrder[j],cardOrder[i]];}
+cardPosition=0;renderCard();
+}
+renderCard();
+
+// Learning progress is private to this browser and not uploaded to the site.
+const progressKey="eva-lesson001-progress-v1";
+function readProgress(){try{return JSON.parse(localStorage.getItem(progressKey)||"{}")||{}}catch(e){return {}}}
+function saveProgress(value){try{localStorage.setItem(progressKey,JSON.stringify(value))}catch(e){}}
+function savePracticeResult(id,score,total){
+const data=readProgress();data.scores=data.scores||{};data.scores[id]={score,total};saveProgress(data);renderPracticeProgress();
+}
+function renderPracticeProgress(){
+const data=readProgress(),scores=data.scores||{},ids=["mcq-result","gap-result","order-result","matching-result"];
+const done=ids.filter(id=>scores[id]&&Number.isFinite(scores[id].score));
+const points=done.reduce((n,id)=>n+scores[id].score,0);
+document.getElementById("practice-progress").textContent=done.length?done.length+" of 4 auto-checked sections completed · "+points+" correct out of "+done.reduce((n,id)=>n+scores[id].total,0)+" checked questions.":"No sections checked yet.";
+}
+renderPracticeProgress();
+const reviewChecks=Array.from(document.querySelectorAll('#review input[type="checkbox"]'));
+function renderReviewProgress(){
+const checked=reviewChecks.filter(input=>input.checked).length;
+document.getElementById("review-progress").textContent=checked+" of "+reviewChecks.length+" goals checked"+(checked===reviewChecks.length?" — excellent progress!":".");
+}
+const previous=readProgress();
+reviewChecks.forEach((input,i)=>{
+input.checked=Array.isArray(previous.checklist)&&previous.checklist[i]===true;
+input.addEventListener("change",()=>{
+const data=readProgress();data.checklist=reviewChecks.map(x=>x.checked);saveProgress(data);renderReviewProgress();
+});
+});
+renderReviewProgress();
+
+// An always-readable answer key, independent of browser storage.
+function safeText(x){return String(x).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
+const allAnswers=[
+...mcq.map(x=>[x.o[x.a],x.why]),
+...gaps.map(x=>[x[1],x[2]]),
+...orders.map(x=>[x[1],"Check the complete sentence."]),
+...matching.map(x=>[phraseChoices.find(p=>p[0]===x[1])[1],"Match the situation to the most appropriate phrase."])
+];
+document.getElementById("full-answer-key").innerHTML="<ol>"+allAnswers.map(x=>"<li><strong>"+safeText(x[0])+"</strong> — "+safeText(x[1])+"</li>").join("")+"</ol>";
+
 </script>
 </body>
 </html>
