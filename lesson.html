@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Lesson 001: Welcome to English. Free detailed British English lessons at Engli Vance Academy.">
+<title>Lesson 001 | Engli Vance Academy</title>
+<style>
+:root{--navy:#0d1b2a;--blue:#19334d;--teal:#078e84;--gold:#f4b942;--ink:#182d43;--muted:#60758a;--bg:#f5f8fb;--line:#dce6ec}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 Arial,Helvetica,sans-serif}
+button,input,textarea,select{font:inherit}
+button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+[hidden]{display:none!important}
+.container{width:min(1100px,calc(100% - 32px));margin:auto}
+header{background:var(--navy);color:white}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:17px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{background:var(--gold);color:var(--navy);border-radius:11px;padding:9px;font-weight:900;font-size:20px}
+.brand strong{display:block;font-size:17px;line-height:1.2}
+.brand small{color:#b5cbd8;font-size:11px}
+.back{font-size:13px;color:#d0e5ed;font-weight:bold}
+.hero{background:radial-gradient(circle at 85% 10%,#24635b,transparent 45%),linear-gradient(120deg,#0d1b2a,#1b3853);color:white;padding:66px 0}
+.tag{display:inline-block;background:#175449;color:#c3fff0;border-radius:25px;padding:7px 14px;font-size:11px;font-weight:bold;letter-spacing:1px}
+.hero h1{font:clamp(39px,6vw,66px)/1.1 Georgia,serif;letter-spacing:-1px;margin:22px 0}
+.hero h1 span{color:var(--gold)}
+.hero p{color:#d0e0e9;font-size:17px;max-width:700px}
+.hero-meta{display:flex;gap:10px;flex-wrap:wrap;margin:25px 0}
+.hero-meta span{border:1px solid #5b7f83;border-radius:7px;padding:5px 12px;font-size:12px;color:#daf7ee}
+.btn{border:0;border-radius:10px;padding:12px 21px;font-size:14px;font-weight:bold;display:inline-block;margin:6px 5px 6px 0}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.btn.teal{background:var(--teal);color:white}
+.btn.light{background:white;color:var(--navy)}
+.toc{background:white;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.toc-inner{display:flex;gap:9px;padding:12px 0;overflow-x:auto}
+.toc a{padding:8px 12px;background:#eff5f6;color:#35616b;border-radius:8px;white-space:nowrap;font-size:12px;font-weight:bold}
+section.unit{padding:60px 0}
+section.unit.white{background:white}
+.kicker{font-size:12px;color:var(--teal);letter-spacing:2px;font-weight:900;text-transform:uppercase}
+h2{font:clamp(28px,4vw,40px)/1.25 Georgia,serif;margin:12px 0 22px}
+h3{font-size:21px;line-height:1.3;margin:25px 0 12px}
+p{margin:12px 0}
+.lead{color:var(--muted);max-width:780px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.card{background:white;border:1px solid var(--line);border-radius:14px;padding:23px}
+.card h3{margin:0 0 10px}
+.card p{font-size:14px;color:var(--muted)}
+.highlight{background:#e9f7f3;border-left:5px solid var(--teal);border-radius:0 12px 12px 0;padding:20px 24px;margin:25px 0}
+.highlight.gold{background:#fff5da;border-color:var(--gold)}
+.phrase{background:white;border:1px solid var(--line);padding:18px;border-radius:12px}
+.phrase strong{font-size:17px;color:var(--navy)}
+.phrase small{display:block;color:var(--muted);font-size:13px;margin-top:7px}
+.num{display:inline-block;background:#e0f7ee;color:var(--teal);border-radius:7px;padding:3px 9px;font-weight:bold;font-size:12px;margin-right:6px}
+.tablewrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:white;border:1px solid var(--line);border-radius:12px}
+th,td{padding:13px 15px;border-bottom:1px solid #e6edf2;text-align:left;vertical-align:top}
+th{background:#e7f7f2;font-size:13px;color:#166d64}
+td{font-size:14px}
+.dialogue{background:white;border:1px solid var(--line);border-radius:15px;padding:25px;margin:17px 0}
+.dialogue h3{margin-top:0;color:var(--teal)}
+.speech{padding:12px 15px;border-radius:9px;margin:8px 0;background:#f2f6fa}
+.speech.alt{background:#e8f7f3}
+.speech b{color:#087f75}
+.tip{font-size:13px;color:#667d8f;margin-top:12px}
+.steps{counter-reset:step}
+.step{display:flex;gap:18px;align-items:flex-start;background:white;border-radius:13px;border:1px solid var(--line);margin:12px 0;padding:19px}
+.step-number{background:var(--navy);color:white;border-radius:50%;height:36px;width:36px;display:grid;place-items:center;flex-shrink:0;font-weight:bold}
+.step p{color:var(--muted);font-size:14px;margin:5px 0}
+.exercise{background:white;border:1px solid var(--line);border-radius:13px;padding:19px;margin:14px 0}
+.exercise strong{color:var(--navy)}
+.choice{display:flex;align-items:start;gap:10px;border:1px solid #e2e9ef;background:#f8fafc;border-radius:8px;padding:10px 12px;margin:8px 0;font-size:14px;cursor:pointer}
+.choice input{margin-top:6px;flex-shrink:0}
+.feedback{border-radius:9px;padding:12px 14px;margin-top:12px;font-size:13px}
+.feedback.good{background:#e8f8eb;color:#16653b}
+.feedback.bad{background:#fff0e8;color:#8f4a24}
+input[type=text],select,textarea{background:white;border:1px solid #cbd9e1;border-radius:8px;padding:11px;width:100%;max-width:600px;margin-top:8px;color:var(--ink)}
+textarea{min-height:82px;resize:vertical}
+.exercise-set{margin:33px 0}
+.exercise-set h3{border-bottom:1px solid var(--line);padding-bottom:11px}
+details{border:1px solid var(--line);background:white;border-radius:10px;padding:14px 17px;margin:12px 0}
+summary{font-weight:bold;color:var(--teal);cursor:pointer}
+.result{font-weight:bold;padding:14px;margin:15px 0;background:#eaf7f4;border-radius:9px}
+.progress{height:8px;background:#dfe9ed;border-radius:6px;overflow:hidden;margin:22px 0}
+.progress div{height:100%;width:0;background:var(--teal)}
+.finish{background:linear-gradient(120deg,#0d1b2a,#165c55);color:white;padding:35px;border-radius:18px;text-align:center}
+.finish h2{color:white}
+.finish p{color:#cce3e3}
+footer{text-align:center;background:var(--navy);color:#bdd0db;padding:33px 18px;font-size:13px}
+footer strong{color:white;font-size:19px}
+@media(max-width:750px){.grid,.grid3{grid-template-columns:1fr}.hero{padding:46px 0}.topbar{justify-content:center}.back{font-size:12px}section.unit{padding:43px 0}.dialogue{padding:17px}}
+@media print{header,.toc,.btn{display:none!important}body{background:white}section.unit{padding:20px 0;break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container topbar">
+<a href="/" class="brand">
+<div class="logo">EV</div>
+<div><strong>Engli Vance Academy</strong><small>Learn Clearly. Speak Confidently.</small></div>
+</a>
+<a class="back" href="/">← Back to Academy</a>
+</div>
+</header>
+
+<div class="hero">
+<div class="container">
+<span class="tag">MODULE 01 · SOUND FOUNDATIONS</span>
+<h1>LESSON 001<br><span>Welcome to English</span></h1>
+<p>Everyday Phrases and Learning Routines</p>
+<p>Your first step towards communicating confidently in British English. Learn practical phrases, understand when to use them and begin building a simple daily learning habit.</p>
+<div class="hero-meta">
+<span>PRE-A1 · ABSOLUTE BEGINNER</span>
+<span>100% FREE</span>
+<span>BRITISH ENGLISH</span>
+<span>SELF-PACED</span>
+</div>
+<a class="btn gold" href="#goals">Start This Lesson →</a>
+<a class="btn light" href="#practice">Jump to Practice</a>
+</div>
+</div>
+
+<div class="toc">
+<div class="container toc-inner">
+<a href="#goals">Goals</a>
+<a href="#core">10 Core Phrases</a>
+<a href="#more">More Examples</a>
+<a href="#british">British English</a>
+<a href="#dialogues">Dialogues</a>
+<a href="#routine">Study Routine</a>
+<a href="#practice">40 Exercises</a>
+<a href="#review">Review</a>
+</div>
+</div>
+
+<main>
+
+<section class="unit white" id="goals">
+<div class="container">
+<div class="kicker">01 · Start Here</div>
+<h2>Welcome to your English journey.</h2>
+<p class="lead">You do not need perfect grammar or a large vocabulary to begin communicating. A few useful English phrases can help you greet another person, introduce yourself, ask for help and show appreciation.</p>
+<div class="highlight">
+<strong>Remember:</strong> Clear communication matters more than speed. Speak slowly, use short sentences and practise regularly.
+</div>
+<h3>By the end of this lesson, you will be able to:</h3>
+<div class="grid">
+<div class="card">✓ Greet another person politely.</div>
+<div class="card">✓ Introduce yourself using your name.</div>
+<div class="card">✓ Use simple expressions when meeting someone.</div>
+<div class="card">✓ Ask somebody to speak more slowly.</div>
+<div class="card">✓ Ask for a word or sentence to be repeated.</div>
+<div class="card">✓ Explain why you are learning English.</div>
+<div class="card">✓ Thank somebody and show understanding.</div>
+<div class="card">✓ Follow a simple daily study routine.</div>
+</div>
+<h3>How should a complete beginner learn?</h3>
+<p>Start with complete phrases that have clear meanings. Read a phrase, understand its purpose, say it aloud and change one small part to make it personal.</p>
+<p>For example, the model sentence <strong>“Hello. My name is Sara.”</strong> can become <strong>“Hello. My name is James.”</strong> Only the name changes. You can already make a new, useful English sentence.</p>
+</div>
+</section>
+
+<section class="unit" id="core">
+<div class="container">
+<div class="kicker">02 · Foundation Language</div>
+<h2>The 10 essential phrases</h2>
+<p class="lead">These are the ten worked examples from the original Lesson 001 in our study book. Learn what each phrase means and when to use it.</p>
+<div class="grid" id="core-phrases"></div>
+<div class="highlight gold"><strong>Learning tip:</strong> Do not memorise all ten phrases at once. Start with three useful phrases, practise them and return to the others later.</div>
+</div>
+</section>
+
+<section class="unit white" id="more">
+<div class="container">
+<div class="kicker">03 · Expand Your English</div>
+<h2>30 more practical expressions</h2>
+<p class="lead">These additional examples help you use the same basic English in different situations. They are supplementary examples, so learn the essential phrases first.</p>
+<div id="extra-phrases"></div>
+
+<h3>Build your own sentences</h3>
+<div class="tablewrap">
+<table>
+<thead><tr><th>Useful pattern</th><th>Change one part</th><th>New sentence</th></tr></thead>
+<tbody>
+<tr><td>My name is Sara.</td><td>Sara → Daniel</td><td>My name is Daniel.</td></tr>
+<tr><td>I'm from London.</td><td>London → Leeds</td><td>I'm from Leeds.</td></tr>
+<tr><td>I'm learning English for work.</td><td>work → travel</td><td>I'm learning English for travel.</td></tr>
+<tr><td>Good morning, James.</td><td>James → Emily</td><td>Good morning, Emily.</td></tr>
+<tr><td>Please speak slowly.</td><td>speak → read</td><td>Please read slowly.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="highlight">
+<strong>Small grammar note:</strong> “I am” and “I'm” have the same meaning. “I'm” is a contraction and is common in everyday speech and informal writing. You will study the verb BE in greater detail later.
+</div>
+</div>
+</section>
+
+<section class="unit" id="british">
+<div class="container">
+<div class="kicker">04 · Speak Naturally</div>
+<h2>British English usage and pronunciation</h2>
+<p class="lead">Polite expressions are especially useful when meeting people at work, in education and in everyday life.</p>
+
+<div class="grid">
+<div class="card"><h3>Hello or Hi?</h3><p>Both are greetings. “Hello” works in most situations. “Hi” is usually a little more informal.</p></div>
+<div class="card"><h3>Good morning, afternoon or evening?</h3><p>Use them at appropriate times of day. There is no exact universal minute when one greeting must change to the next.</p></div>
+<div class="card"><h3>Good night</h3><p>“Good night” is usually said when leaving someone at night or before going to bed. It is not normally used as an opening greeting.</p></div>
+<div class="card"><h3>Nice to meet you</h3><p>Use this when meeting someone for the first time. “Nice to see you” is suitable when meeting somebody you already know.</p></div>
+<div class="card"><h3>Sorry and Excuse me</h3><p>“Sorry?” can politely show that you did not hear someone. “Excuse me” is useful for getting attention or making a request.</p></div>
+<div class="card"><h3>Can you or Could you?</h3><p>Both can be used to make requests. “Could you ...?” often sounds a little softer or more polite.</p></div>
+</div>
+
+<h3>Pronunciation guidance</h3>
+<p>You do not need to master phonetic symbols in Lesson 001. Begin by hearing and practising the whole expression. The notes below draw attention to important features of natural speech.</p>
+
+<div class="tablewrap">
+<table>
+<thead><tr><th>Expression</th><th>Pronunciation focus</th></tr></thead>
+<tbody>
+<tr><td><strong>Hello</strong></td><td>The second part receives the main stress: hel-LO.</td></tr>
+<tr><td><strong>My name is ...</strong></td><td>Say your name clearly. Leave a natural short pause after it.</td></tr>
+<tr><td><strong>Please speak slowly.</strong></td><td>Give “slowly” enough time. Do not rush the request.</td></tr>
+<tr><td><strong>Could you say that again, please?</strong></td><td>Use a natural, gentle question intonation.</td></tr>
+<tr><td><strong>Nice to meet you.</strong></td><td>Use a warm, friendly tone.</td></tr>
+<tr><td><strong>Thank you.</strong></td><td>Practise the “th” sound gently with your tongue near your upper teeth.</td></tr>
+</tbody>
+</table>
+</div>
+
+<div class="highlight gold">
+<strong>Important:</strong> This is a text-based pronunciation guide. British-English audio and video demonstrations can be added when they are ready. Never worry if your accent is not perfect at the beginning.
+</div>
+
+<h3>Simple writing conventions</h3>
+<div class="grid">
+<div class="card"><b>Capital letters</b><p>Begin a sentence with a capital letter. The word “I” is always capitalised.</p></div>
+<div class="card"><b>Full stops</b><p>Use a full stop at the end of a simple statement: “My name is Lina.”</p></div>
+<div class="card"><b>Question marks</b><p>Use a question mark at the end of a direct question: “Could you repeat that?”</p></div>
+<div class="card"><b>Polite punctuation</b><p>“Could you say that again, please?” normally includes a comma before the final “please”.</p></div>
+</div>
+</div>
+</section>
+
+<section class="unit white" id="dialogues">
+<div class="container">
+<div class="kicker">05 · English in Real Life</div>
+<h2>Five practical conversations</h2>
+<p class="lead">Read the dialogues slowly. Then practise both speakers' lines. You can replace the names and situations with details from your own life.</p>
+<div id="dialogue-list"></div>
+</div>
+</section>
+
+<section class="unit" id="routine">
+<div class="container">
+<div class="kicker">06 · Build a Good Habit</div>
+<h2>Your 10-minute daily learning routine</h2>
+<p class="lead">A short routine is easier to repeat consistently than a very long session. Try the following five steps.</p>
+<div class="steps">
+<div class="step"><div class="step-number">1</div><div><strong>Listen or read — 2 minutes</strong><p>Choose two useful phrases. Read them carefully or listen to a clear model when audio is available.</p></div></div>
+<div class="step"><div class="step-number">2</div><div><strong>Repeat — 2 minutes</strong><p>Say each phrase slowly. Focus on a clear message, not on speaking quickly.</p></div></div>
+<div class="step"><div class="step-number">3</div><div><strong>Understand — 2 minutes</strong><p>Ask yourself when you would use each phrase. Imagine a real situation.</p></div></div>
+<div class="step"><div class="step-number">4</div><div><strong>Personalise — 2 minutes</strong><p>Change a name, location or learning purpose. Make one sentence about your own life.</p></div></div>
+<div class="step"><div class="step-number">5</div><div><strong>Use and recall — 2 minutes</strong><p>Say the phrase without looking. Check it, correct anything necessary and try again.</p></div></div>
+</div>
+<div class="highlight">
+<strong>Suggested review:</strong> Practise the phrases again tomorrow, after a few days and about a week later. Frequent short reviews can help you remember what you learn.
+</div>
+</div>
+</section>
+
+<section class="unit white" id="practice">
+<div class="container">
+<div class="kicker">07 · Practise and Check</div>
+<h2>40 practice activities</h2>
+<p class="lead">Complete the activities in order. Read each question carefully. Some answers are checked automatically; open-ended writing tasks include model responses.</p>
+
+<div class="exercise-set">
+<h3>Part A — Choose the best answer (12 questions)</h3>
+<p>Select one answer for each question and press “Check Answers”.</p>
+<div id="multiple-choice"></div>
+<button class="btn teal" onclick="checkMCQ()">Check Part A Answers</button>
+<div id="mcq-result" class="result" hidden></div>
+</div>
+
+<div class="exercise-set">
+<h3>Part B — Complete the phrases (10 questions)</h3>
+<p>Type the missing word. Use the meaning of the sentence to help you.</p>
+<div id="gap-exercises"></div>
+<button class="btn teal" onclick="checkGaps()">Check Part B Answers</button>
+<div id="gap-result" class="result" hidden></div>
+</div>
+
+<div class="exercise-set">
+<h3>Part C — Put the words in order (8 questions)</h3>
+<p>Write a complete sentence using the given words. Start with a capital letter and use appropriate punctuation.</p>
+<div id="order-exercises"></div>
+<button class="btn teal" onclick="checkOrders()">Check Part C Answers</button>
+<div id="order-result" class="result" hidden></div>
+</div>
+
+<div class="exercise-set">
+<h3>Part D — Match the situation (5 questions)</h3>
+<p>Choose the most appropriate phrase for each situation.</p>
+<div id="matching-exercises"></div>
+<button class="btn teal" onclick="checkMatching()">Check Part D Answers</button>
+<div id="matching-result" class="result" hidden></div>
+</div>
+
+<div class="exercise-set">
+<h3>Part E — Write your own English (5 activities)</h3>
+<p>These are personal writing tasks. There may be more than one correct answer. Write your response before opening the model answer.</p>
+
+<div class="exercise"><strong>36. Introduce yourself using your name.</strong><textarea placeholder="Write your sentence here..."></textarea><details><summary>Show model answer</summary><p>Hello. My name is Daniel. Nice to meet you.</p></details></div>
+
+<div class="exercise"><strong>37. Explain why you are learning English.</strong><textarea placeholder="Write your sentence here..."></textarea><details><summary>Show model answer</summary><p>I am learning English for work.</p><p>Other reasons, such as travel or study, are also acceptable.</p></details></div>
+
+<div class="exercise"><strong>38. Politely ask a colleague to repeat a sentence.</strong><textarea placeholder="Write your sentence here..."></textarea><details><summary>Show model answer</summary><p>I'm sorry. Could you say that again, please?</p></details></div>
+
+<div class="exercise"><strong>39. Ask a teacher to write a word on the board.</strong><textarea placeholder="Write your sentence here..."></textarea><details><summary>Show model answer</summary><p>Could you write the word on the board, please?</p></details></div>
+
+<div class="exercise"><strong>40. Write a short three-line conversation between two people meeting for the first time.</strong><textarea placeholder="Write your conversation here..."></textarea><details><summary>Show model answer</summary><p>A: Hello. My name is Sara.<br>B: Hello, I'm Karim. Nice to meet you.<br>A: Nice to meet you, too.</p></details></div>
+</div>
+</div>
+</section>
+
+<section class="unit" id="review">
+<div class="container">
+<div class="kicker">08 · Review and Progress</div>
+<h2>What have you learnt?</h2>
+<p>Before moving forward, make sure you can use at least three complete phrases without looking at the examples.</p>
+<div class="card">
+<h3>Lesson completion checklist</h3>
+<label><input type="checkbox"> I can greet another person politely.</label><hr>
+<label><input type="checkbox"> I can introduce myself using my name.</label><hr>
+<label><input type="checkbox"> I can ask somebody to speak slowly.</label><hr>
+<label><input type="checkbox"> I can ask for repetition.</label><hr>
+<label><input type="checkbox"> I can thank somebody.</label><hr>
+<label><input type="checkbox"> I can say why I am learning English.</label><hr>
+<label><input type="checkbox"> I have completed the practice activities.</label>
+</div>
+<div class="highlight gold">
+<strong>Final challenge:</strong> Imagine you are meeting a new colleague. Greet them, introduce yourself, explain that you are learning English and ask them to speak slowly. Try to do this without reading your notes.
+</div>
+<div class="finish">
+<h2>Well done! You have started your English journey.</h2>
+<p>Remember: you do not need perfect English before you begin speaking. Start small, practise regularly and keep going.</p>
+<p><strong>Next:</strong> Lesson 002 — The Alphabet, Part 1: A to M.</p>
+<a href="/" class="btn gold">Back to Academy →</a>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<strong>Engli Vance Academy</strong>
+<p>Learn Clearly. Speak Confidently.</p>
+<p>Free British English Learning · Pre-A1 to Advanced</p>
+<p>© 2026 Engli Vance Academy</p>
+</footer>
+
+<script>
+const core=[
+["Hello. My name is Sara.","Greet someone and introduce yourself."],
+["Please speak slowly.","Ask someone to speak at a slower speed."],
+["Could you say that again, please?","Politely ask for repetition."],
+["Hello, I am Karim. Nice to meet you.","Introduce yourself to a new person."],
+["I'm sorry. Could you repeat that, please?","Ask again after missing an instruction or word."],
+["Good afternoon. My name is Lina.","Greet someone in the afternoon and introduce yourself."],
+["I am learning English for work.","Explain a reason for studying English."],
+["Please write the word on the board.","Ask for a written example in a learning situation."],
+["Can you speak more slowly, please?","Politely request slower speech."],
+["Thank you. Now I understand.","Thank somebody and show that the explanation helped."]
+];
+document.getElementById("core-phrases").innerHTML=core.map((x,i)=>`
+<div class="phrase"><span class="num">${String(i+1).padStart(2,"0")}</span><strong>${x[0]}</strong><small>${x[1]}</small></div>`).join("");
+
+const groups=[
+{title:"A. Greetings and Friendly Openings",items:[
+"Hi, I'm Alex.",
+"Good morning, everyone.",
+"Good afternoon, Ms Brown.",
+"Good evening, and welcome.",
+"Hello, how are you?",
+"It's good to see you again."
+]},
+{title:"B. Introducing Yourself and Others",items:[
+"My name is James.",
+"I'm Emily.",
+"I'm from Manchester.",
+"I work in a hospital.",
+"I study English in the evening.",
+"This is my colleague, Priya."
+]},
+{title:"C. Asking for Help and Repetition",items:[
+"Sorry, I didn't catch the last word.",
+"Could you speak a little more slowly?",
+"Can you say the name again?",
+"Could you write it down, please?",
+"Please show me one example.",
+"Can you help me with this form?"
+]},
+{title:"D. English in Learning and Work",items:[
+"I want to learn English for travel.",
+"I practise for ten minutes each day.",
+"I read one sentence twice.",
+"I write new words in a notebook.",
+"I ask questions when I do not understand.",
+"I learn useful phrases at work."
+]},
+{title:"E. Thanking and Closing Conversations",items:[
+"Thanks for your help.",
+"That's clear now, thank you.",
+"I understand the first part.",
+"I'll practise again tomorrow.",
+"See you in class.",
+"Have a good day."
+]}
+];
+let extraCount=0;
+document.getElementById("extra-phrases").innerHTML=groups.map(g=>`
+<h3>${g.title}</h3><div class="grid3">${g.items.map(p=>`<div class="phrase"><span class="num">${++extraCount}</span><strong>${p}</strong></div>`).join("")}</div>`).join("");
+
+const dialogues=[
+{title:"Dialogue 1 — Meeting a New Colleague",focus:"Greeting, giving names and responding politely.",lines:[
+["Sara","Hello. My name is Sara."],
+["Karim","Hello, I'm Karim. Nice to meet you."],
+["Sara","Nice to meet you, too."],
+["Karim","Are you new here?"],
+["Sara","Yes. I'm learning English for work."]
+]},
+{title:"Dialogue 2 — Asking the Teacher for Help",focus:"Requesting repetition and showing understanding.",lines:[
+["Emily","Please listen to this sentence."],
+["Learner","I'm sorry. Could you repeat that, please?"],
+["Emily","Of course. I will say it again."],
+["Learner","Thank you. Now I understand."],
+["Emily","You're welcome."]
+]},
+{title:"Dialogue 3 — At a Reception Desk",focus:"Polite greetings and slower speech in a workplace.",lines:[
+["Receptionist","Good morning. How can I help you?"],
+["Visitor","Good morning. My name is Daniel."],
+["Receptionist","Nice to meet you, Daniel."],
+["Visitor","Sorry, could you speak more slowly, please?"],
+["Receptionist","Yes, of course."],
+["Visitor","Thank you very much."]
+]},
+{title:"Dialogue 4 — A Telephone Conversation",focus:"Asking for clearer communication on the telephone.",lines:[
+["Caller","Hello. My name is Lina."],
+["Office","Hello, Lina. How can I help?"],
+["Caller","Could you say that again, please?"],
+["Office","Of course. How can I help you?"],
+["Caller","Thank you."]
+]},
+{title:"Dialogue 5 — Two Adult Learners",focus:"Introducing yourself and explaining your learning purpose.",lines:[
+["James","Hello. I'm James. Nice to meet you."],
+["Priya","I'm Priya. Nice to meet you, too."],
+["James","I'm learning English for work."],
+["Priya","I'm learning English for travel."],
+["James","Let's practise together."],
+["Priya","Yes, let's begin!"]
+]}
+];
+document.getElementById("dialogue-list").innerHTML=dialogues.map(d=>`
+<div class="dialogue"><h3>${d.title}</h3>
+${d.lines.map((l,i)=>`<div class="speech ${i%2?"alt":""}"><b>${l[0]}:</b> ${l[1]}</div>`).join("")}
+<div class="tip"><strong>Learning focus:</strong> ${d.focus}</div></div>`).join("");
+
+const mcq=[
+{q:"You meet someone for the first time. What can you say?",o:["Good night.","Nice to meet you.","Now I understand."],a:1,why:"Nice to meet you is suitable when you first meet someone."},
+{q:"Someone is speaking too quickly. What should you say?",o:["Please speak more slowly.","Good afternoon.","My name is Sara."],a:0,why:"This polite request asks the other person to slow down."},
+{q:"Which phrase asks for repetition?",o:["Nice to see you.","Have a good day.","Could you say that again, please?"],a:2,why:"This asks the speaker to repeat their words."},
+{q:"Which expression is normally an evening greeting?",o:["Good evening.","Good night.","See you tomorrow."],a:0,why:"Good evening is a greeting. Good night is normally a farewell."},
+{q:"Which sentence introduces your name?",o:["Please write slowly.","My name is Daniel.","Thank you very much."],a:1,why:"My name is ... is a simple introduction."},
+{q:"What can you say after someone explains something clearly?",o:["Please speak slowly.","Nice to meet you.","Thank you. Now I understand."],a:2,why:"This expresses appreciation and understanding."},
+{q:"Which sentence gives a reason for studying English?",o:["I am learning English for work.","Hello, my name is Karim.","Could you repeat that?"],a:0,why:"For work explains the purpose of learning English."},
+{q:"Which is a polite classroom request?",o:["Good night.","Please write the word on the board.","See you later."],a:1,why:"It asks somebody to write a word."},
+{q:"Which greeting is suitable at the beginning of a morning conversation?",o:["Good morning.","Good night.","Goodbye."],a:0,why:"Good morning is a greeting used in the morning."},
+{q:"Which request often sounds a little softer?",o:["You repeat!","Speak now!","Could you repeat that, please?"],a:2,why:"Could you ... please? is a common polite request."},
+{q:"You meet an old colleague again. Which phrase is suitable?",o:["I am Karim.","Nice to see you again.","Please write the word."],a:1,why:"Nice to see you again is appropriate for someone you already know."},
+{q:"Which sentence is written correctly?",o:["my name is sara.","My name is Sara.","My name is sara"],a:1,why:"Begin a sentence with a capital letter, capitalise names and finish with suitable punctuation."}
+];
+document.getElementById("multiple-choice").innerHTML=mcq.map((x,i)=>`
+<div class="exercise">
+<strong>${i+1}. ${x.q}</strong>
+${x.o.map((o,j)=>`<label class="choice"><input type="radio" name="m${i}" value="${j}"><span>${String.fromCharCode(65+j)}. ${o}</span></label>`).join("")}
+<div id="mf${i}" class="feedback" hidden></div>
+</div>`).join("");
+
+function norm(s){return String(s).toLowerCase().replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim()}
+function showResult(id,score,total){let el=document.getElementById(id);el.hidden=false;el.textContent="Your score: "+score+" / "+total+". Review the explanations below."}
+function showFeedback(id,correct,answer,why){
+const el=document.getElementById(id);
+el.hidden=false;
+el.className="feedback "+(correct?"good":"bad");
+el.innerHTML=(correct?"✓ Correct.":"Please review.")+"<br><strong>Answer:</strong> "+answer+"<br>"+why;
+}
+function checkMCQ(){
+let score=0;
+mcq.forEach((x,i)=>{
+const selected=document.querySelector('input[name="m'+i+'"]:checked');
+const correct=selected&&Number(selected.value)===x.a;
+if(correct)score++;
+showFeedback("mf"+i,correct,x.o[x.a],x.why);
+});
+showResult("mcq-result",score,mcq.length);
+}
+
+const gaps=[
+["Hello. My ___ is Daniel.","name","Use My name is ... to introduce yourself."],
+["Please speak ___.","slowly","Slowly describes a slower speaking speed."],
+["Could you say that ___, please?","again","Again means one more time."],
+["Nice to ___ you.","meet","Use meet when meeting someone for the first time."],
+["I am learning English ___ work.","for","For introduces a purpose."],
+["Please write the word on the ___.","board","A classroom board is used to display writing."],
+["Thank ___.","you","Thank you shows appreciation."],
+["Now I ___.","understand","Understand means that the meaning is clear."],
+["It is three o'clock in the afternoon. Good ___.","afternoon","Good afternoon is appropriate in the afternoon."],
+["Can you speak ___ slowly, please?","more","More slowly asks for a lower speed."]
+];
+document.getElementById("gap-exercises").innerHTML=gaps.map((x,i)=>`
+<div class="exercise"><strong>${i+13}. ${x[0]}</strong>
+<input type="text" id="gap${i}" autocomplete="off" aria-label="Answer for question ${i+13}" placeholder="Type the missing word">
+<div id="gf${i}" class="feedback" hidden></div></div>`).join("");
+function checkGaps(){
+let score=0;
+gaps.forEach((x,i)=>{
+let correct=norm(document.getElementById("gap"+i).value)===norm(x[1]);
+if(correct)score++;
+showFeedback("gf"+i,correct,x[1],x[2]);
+});
+showResult("gap-result",score,gaps.length);
+}
+
+const orders=[
+["name / My / is / Sara","My name is Sara."],
+["slowly / Please / speak","Please speak slowly."],
+["you / meet / Nice / to","Nice to meet you."],
+["again / say / Could / that / you / please","Could you say that again, please?"],
+["English / learning / I / am","I am learning English."],
+["for / work / English / learning / am / I","I am learning English for work."],
+["your / for / Thank / help / you","Thank you for your help."],
+["understand / I / Now","Now I understand."]
+];
+document.getElementById("order-exercises").innerHTML=orders.map((x,i)=>`
+<div class="exercise"><strong>${i+23}. Arrange: ${x[0]}</strong>
+<input type="text" id="order${i}" autocomplete="off" placeholder="Write the complete sentence">
+<div id="of${i}" class="feedback" hidden></div></div>`).join("");
+function checkOrders(){
+let score=0;
+orders.forEach((x,i)=>{
+let correct=norm(document.getElementById("order"+i).value)===norm(x[1]);
+if(correct)score++;
+showFeedback("of"+i,correct,x[1],"Check the word order, capital letters and punctuation.");
+});
+showResult("order-result",score,orders.length);
+}
+
+const phraseChoices=[
+["A","Nice to meet you."],
+["B","Please speak more slowly."],
+["C","Could you repeat that, please?"],
+["D","Thank you. Now I understand."],
+["E","Please write the word on the board."]
+];
+const matching=[
+["A speaker is talking too quickly.","B"],
+["You meet a new colleague for the first time.","A"],
+["You did not hear part of a sentence.","C"],
+["You want to see the spelling on the classroom board.","E"],
+["You understand after receiving help.","D"]
+];
+document.getElementById("matching-exercises").innerHTML=`
+<div class="highlight">
+${phraseChoices.map(x=>"<div><strong>"+x[0]+".</strong> "+x[1]+"</div>").join("")}
+</div>
+${matching.map((x,i)=>`
+<div class="exercise"><strong>${i+31}. ${x[0]}</strong>
+<select id="match${i}" aria-label="Match question ${i+31}">
+<option value="">Choose a phrase</option>
+${phraseChoices.map(p=>`<option value="${p[0]}">${p[0]}</option>`).join("")}
+</select>
+<div id="matchf${i}" class="feedback" hidden></div>
+</div>`).join("")}`;
+function checkMatching(){
+let score=0;
+matching.forEach((x,i)=>{
+let selected=document.getElementById("match"+i).value;
+let correct=selected===x[1];
+if(correct)score++;
+let answer=phraseChoices.find(p=>p[0]===x[1]);
+showFeedback("matchf"+i,correct,answer[0]+". "+answer[1],"This phrase is suitable for the situation described.");
+});
+showResult("matching-result",score,matching.length);
+}
+</script>
+</body>
+</html>
