@@ -393,6 +393,10 @@ section.content{padding:48px 16px}
 .stat-grid strong{font-size:24px}
 .stat-grid small{font-size:11px}
 }
+.lesson-status{font-size:13px;color:#526878;line-height:1.5;min-height:40px}
+.lesson-status strong{color:#087f75}
+a.btn{text-decoration:none}
+@media(max-width:600px){.lesson-status{min-height:0}}
 </style>
 </head>
 <body>
@@ -422,7 +426,7 @@ section.content{padding:48px 16px}
 <div class="pill">✦ YOUR ENGLISH JOURNEY STARTS HERE</div>
 <h1>English for everyone.<br><span class="gold">Confidence for life.</span></h1>
 <p>Learn British English from absolute beginner to advanced. Simple explanations, practical examples and useful exercises — completely free.</p>
-<a href="#lessons" class="btn btn-gold">Start Learning Free →</a>
+<a href="lesson.html" class="btn btn-gold">Start Lesson 001 — Free →</a>
 <a href="#courses" class="btn btn-white">Explore Courses</a>
 <p style="font-size:12px">✓ 100% Free &nbsp; ✓ British English &nbsp; ✓ Learn at Your Pace</p>
 </div>
@@ -474,8 +478,8 @@ section.content{padding:48px 16px}
 <section class="content alt" id="lessons">
 <div class="wrap">
 <div class="section-label">FREE ENGLISH LESSONS</div>
-<h2 class="section-title">Explore Our Sample Lessons</h2>
-<p class="section-sub">Select a lesson to read explanations, rules and examples. These previews demonstrate our teaching format.</p>
+<h2 class="section-title">Start Learning English — Free</h2>
+<p class="section-sub">Lesson 001 is a complete interactive lesson with 40 practice activities and model answers. Other listed lessons are short previews while the full course is being developed.</p>
 <input id="search" type="search" placeholder="Search lessons...">
 <div class="grid3" id="lesson-grid"></div>
 <div class="lesson-view" id="lesson-view" hidden>
@@ -685,12 +689,14 @@ results.length?results.map(l=>`
 <small>LESSON ${l.id} · PRE-A1</small>
 <h3>${l.title}</h3>
 <p>${l.sub}</p>
-<button class="btn btn-teal" onclick="openLesson('${l.id}')">Open Lesson →</button>
+${l.id==="001"?'<p class="lesson-status"><strong>✓ Complete lesson available</strong> · Detailed explanations, listening practice and 40 exercises</p><a class="btn btn-teal" href="lesson.html">Study Full Lesson →</a>':'<p class="lesson-status">Short preview · Full lesson coming later</p><button class="btn btn-teal" onclick="openLesson(\''+l.id+'\')">View Preview →</button>'}
 </div>`).join(""):"<p>No lessons found.</p>";
 }
 
 function openLesson(id){
+if(id==="001"){window.location.href="lesson.html";return;}
 const l=lessons.find(x=>x.id===id);
+if(!l)return;
 document.getElementById("lesson-content").innerHTML=`
 <div class="section-label">LESSON ${l.id} · BRITISH ENGLISH</div>
 <h2>${l.title}</h2>
